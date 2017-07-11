@@ -5,7 +5,5 @@ FROM mhart/alpine-node:6.1.0
 ADD ./app /app
 WORKDIR /app
 
-PORT 8080
-
 # Run the app.
 CMD ["npm", "start"]
