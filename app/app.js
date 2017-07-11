@@ -7,7 +7,10 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var gallery = require('./routes/gallery');
 var home = require('./routes/home');
+var password = require('./routes/password');
+
 var app = express();
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
@@ -21,12 +24,15 @@ app.use(app.router);
 app.get('/', home.home);
 app.get('/gallery', gallery.gallery);
 app.get('/home', home.home);
+app.get('/password/:leng', password.password);
+
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
+
 /// error handlers
 // development error handler
 // will print stacktrace

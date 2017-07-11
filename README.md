@@ -5,7 +5,7 @@
     - heroku create
     
     - heroku container:push web --app <heroku_app_name>
-      * heroku container:push web --app guarded-scrubland-78590
+      * heroku container:push web --app mysterious-forest-66057
     or
     - docker tag <image> registry.heroku.com/<app>/<process-type>
     - docker push registry.heroku.com/<app>/<process-type>
