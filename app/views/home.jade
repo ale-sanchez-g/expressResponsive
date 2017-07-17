@@ -1,68 +1,41 @@
-doctype html
-html
-  head
-    title Alejandro Gallery of trump giphy
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
-    //
-       Bootstrap CSS 
-    link(href='/stylesheets/bootstrap.css', rel='stylesheet', media='screen')
-    script(type='text/javascript', src='/javascripts/jquery.js')
-    script(type='text/javascript', src='/javascripts/bootstrap.min.js')
-  body
-    //
-       Navigation Bar 
-    .bodykinda
-      .navbar.navbar-default
-        .navbar-header
-          button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
-            span.icon-bar
-            span.icon-bar
-            span.icon-bar
-          a.navbar-brand(href='#')
-            | House of Trumpp
-        .navbar-collapse.collapse.navbar-responsive-collapse
-          ul.nav.navbar-nav.navbar-right
-            li.active
-              a(href='home') Home
-            li
-              a(href='gallery') Trump
-            li
-              a(href='password/english') English Password
-            li
-              a(href='password/spanish') Contraseña en Español
-            li
-              a(href='password/german') Deutsches Passwort
-      //
-         Navigation Bar 
+include header
+div
     .jumbotron
-      h1 Trump Central
+      h1 Experimet Central
       p
-        | You will be shown a gallery of 3 Trump giphys
+        | Get a giphy gallery or try my password API
       p
-        a.btn.btn-primary.btn-lg(href='gallery') Get som Trump
-    .col-lg-4
-      .panel.panel-default
+        a.btn.btn-primary.btn-lg(href='gallery') Get som Giphy
+.col-lg-4
+    .panel.panel-default
         .panel-heading
-          h4  Trump Giphy
-          a(href="https://guarded-scrubland-78590.herokuapp.com/giphy/trump") giphy Trump
+            h4  Trump Giphy
+            a(href="https://guarded-scrubland-78590.herokuapp.com/giphy/trump") Trump giphy example
         .panel-body
-          | https://guarded-scrubland-78590.herokuapp.com/giphy/trump
-    .col-lg-4
-      .panel.panel-default
+            | https://guarded-scrubland-78590.herokuapp.com/giphy/trump
+.col-lg-4
+    .panel.panel-default
         .panel-heading
-          h4 Passwords in English API
-          a(href="https://guarded-scrubland-78590.herokuapp.com/password") English
+            h4 Passwords in English API
+            a(href="https://guarded-scrubland-78590.herokuapp.com/password") English
         .panel-body
-          | https://guarded-scrubland-78590.herokuapp.com/password
-      .panel.panel-default
+            | https://guarded-scrubland-78590.herokuapp.com/password
+    .panel.panel-default
         .panel-heading
-          h4 Passwords in Spanish API
-          a(href="https://guarded-scrubland-78590.herokuapp.com/palabras") Spanish
+            h4 Passwords in Spanish API
+            a(href="https://guarded-scrubland-78590.herokuapp.com/palabras") Spanish
         .panel-body
-          | https://guarded-scrubland-78590.herokuapp.com/palabras
-      .panel.panel-default
+            | https://guarded-scrubland-78590.herokuapp.com/palabras
+    .panel.panel-default
         .panel-heading
-          h4 Passwords in German API
-          a(href="https://guarded-scrubland-78590.herokuapp.com/worts") German
+            h4 Passwords in German API
+            a(href="https://guarded-scrubland-78590.herokuapp.com/worts") German
         .panel-body
-          | https://guarded-scrubland-78590.herokuapp.com/worts
+            | https://guarded-scrubland-78590.herokuapp.com/worts
+.col-lg-4
+    .panel.panel-default
+        .panel-heading
+            h4 Passwords with special character
+            a(href="https://guarded-scrubland-78590.herokuapp.com/api/password?number=5&language=palabras&special=true") Flexyble API
+        .panel-body
+            | https://guarded-scrubland-78590.herokuapp.com/api/password?number=5&language=palabras&special=true
