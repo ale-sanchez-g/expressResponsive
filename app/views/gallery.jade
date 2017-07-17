@@ -1,50 +1,18 @@
-doctype html
-html
-    head
-        title Alejandro Jade Gallery
-        meta(name='viewport', content='width=device-width, initial-scale=1.0')
-        //
-           Bootstrap CSS
-        link(href='/stylesheets/bootstrap.css', rel='stylesheet', media='screen')
-        script(type='text/javascript', src='/javascripts/jquery.js')
-        script(type='text/javascript', src='/javascripts/bootstrap.min.js')
-    body
-        //
-           Navigation Bar
-        .bodykinda
-            .navbar.navbar-default
-                .navbar-header
-                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
-                        span.icon-bar
-                        span.icon-bar
-                        span.icon-bar
-                    a.navbar-brand(href='home')
-                        | House of Trump
-                .navbar-collapse.collapse.navbar-responsive-collapse
-                    ul.nav.navbar-nav.navbar-right
-                        li
-                            a(href='home') Home
-                        li.active
-                            a(href='gallery') Trump
-                        li
-                            a(href='password/english') English Password
-                        li
-                            a(href='password/spanish') Contraseña en Español
-                        li
-                            a(href='password/german') Deutsches Passwort
-            //
-        br
-        .slideshow-container
-            .mySlides
-                .numbertext 1 / 3
-                iframe(src='https://guarded-scrubland-78590.herokuapp.com/giphy/trump')
-            .mySlides
-                .numbertext 2 / 3
-                iframe(src='https://guarded-scrubland-78590.herokuapp.com/giphy/trump')
-            .mySlides
-                .numbertext 3 / 3
-                iframe(src='https://guarded-scrubland-78590.herokuapp.com/giphy/trump')
-            a.prev(onclick="plusSlides(-1)") &#10094;
-            a.next(onclick="plusSlides(1)") &#10095;
-        a.btn.btn-primary.btn-lg(href='gallery') Refresh my TRUMP
-        script(type='text/javascript', src='/javascripts/slidder.js')
+include header
+div
+    h1(align='center') My tag is #{tag}
+    br
+    .slideshow-container
+        .mySlides
+            .numbertext 1 / 3
+            iframe(src='https://guarded-scrubland-78590.herokuapp.com/giphy/' + tag)
+        .mySlides
+            .numbertext 2 / 3
+            iframe(src='https://guarded-scrubland-78590.herokuapp.com/giphy/' + tag)
+        .mySlides
+            .numbertext 3 / 3
+            iframe(src='https://guarded-scrubland-78590.herokuapp.com/giphy/' + tag)
+        a.prev(onclick="plusSlides(-1)") &#10094;
+        a.next(onclick="plusSlides(1)") &#10095;
+    a.btn.btn-primary.btn-lg(href='gallery?tag=' + tag) Refresh my #{tag}
+    script(type='text/javascript', src='/javascripts/slidder.js')

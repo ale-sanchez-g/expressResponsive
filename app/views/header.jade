@@ -1,0 +1,35 @@
+doctype html
+html
+    head
+        title My First App - Alejandro
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        //
+           Bootstrap CSS
+        link(href='/stylesheets/bootstrap.css', rel='stylesheet', media='screen')
+        script(type='text/javascript', src='/javascripts/jquery.js')
+        script(type='text/javascript', src='/javascripts/bootstrap.min.js')
+    body
+        //
+           Navigation Bar
+        .bodykinda
+            .navbar.navbar-default
+                .navbar-header
+                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
+                        span.icon-bar
+                        span.icon-bar
+                        span.icon-bar
+                    a.navbar-brand(href='/')
+                        | Experiment
+                .navbar-collapse.collapse.navbar-responsive-collapse
+                    ul.nav.navbar-nav.navbar-right
+                        li
+                            a(href='/') Home
+                        li
+                            a(href='/gallery?tag=trump') Giphy gallery
+                        li
+                            a(href='/password/english') English Password
+                        li
+                            a(href='/password/spanish') Spanish Password
+                        li
+                            a(href='/password/german') German Password
+        br
