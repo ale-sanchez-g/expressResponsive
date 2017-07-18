@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node app.js"
+    "start": "node app.js",
+    "test":"node ./node_modules/chimp/bin/chimp.js --watch"
   },
   "dependencies": {
     "express": "~3.4.8",
@@ -14,9 +15,10 @@
     "debug": "~0.7.4",
     "jade": "~1.3.0"
   },
-  
   "engines": {
-    "node": "0.10.18"
-  
-}
+    "node": "6.1.0"
+  },
+  "devDependencies": {
+    "chimp": "^0.49.1"
+  }
 }
