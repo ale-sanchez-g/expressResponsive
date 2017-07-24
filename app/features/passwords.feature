@@ -2,7 +2,8 @@ Feature: Users are able to get passwords suggested
 
   # Currently there is a bug in the WEB APP so might need to change the URLS to us password API
   Scenario Outline: User is able to get a password suggested in "<language>"
-    Given I visit "https://mysterious-forest-66057.herokuapp.com/"
+#    Given I visit "https://mysterious-forest-66057.herokuapp.com/"
+    Given I visit "http://localhost:8080/"
     When I select a password in "<language>" through my navigation menu
     Then I will see a password with 3 words in "<language>"
 
