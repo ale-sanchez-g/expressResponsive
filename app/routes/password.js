@@ -1,4 +1,16 @@
 var request = require('request');
+var app_env = process.env['APP_ENV'];
+var apiUrl;
+
+switch (app_env) {
+    case "local":
+        apiUrl = "http://localhost:3001/";
+        console.log("locahost:3001 config");
+        break;
+    default:
+        apiUrl = "https://guarded-scrubland-78590.herokuapp.com/";
+        console.log("production config");
+}
 
 exports.password = function(req, res){
     var leng = req.params.leng;
@@ -17,7 +29,7 @@ exports.password = function(req, res){
             apiTag = "help";
 
     }
-        request.get('https://guarded-scrubland-78590.herokuapp.com/' + apiTag, function(err, response, body) {
+        request.get(apiUrl + apiTag, function(err, response, body) {
             if (!err && response.statusCode == 200) {
                 var locals = JSON.parse(body);
                 res.render('password', locals);
