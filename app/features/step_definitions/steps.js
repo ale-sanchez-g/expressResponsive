@@ -14,5 +14,39 @@ module.exports = function() {
         console.log(password);
     });
 
+    this.When(/^I select a password in "([^"]*)" through homepage$/, function (lang) {
+        browser.click("#" + lang + "_password");
+    });
+
+
+    this.Then(/^I am redirected to my API with a password in "([^"]*)"$/, function (lang) {
+        var tabIds = browser.getTabIds();
+        console.log(tabIds[1]);
+        browser.switchTab(tabIds[1]);
+        console.log(browser.getText("body"));
+        browser.switchTab(tabIds[1]).close();
+    });
+
+
+    this.When(/^I submit a password request for$/, function (table) {
+        // Write code here that turns the phrase above into concrete actions
+        return 'pending';
+    });
+
+
+    this.Then(/^with (\d+) number of words$/, function (arg1) {
+        // Write code here that turns the phrase above into concrete actions
+        return 'pending';
+    });
+
+    this.Then(/^with special characters$/, function () {
+        // Write code here that turns the phrase above into concrete actions
+        return 'pending';
+    });
+
+    this.Then(/^I am redirected to my API with a password in german$/, function () {
+        // Write code here that turns the phrase above into concrete actions
+        return 'pending';
+    });
 
 };

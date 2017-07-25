@@ -31,6 +31,7 @@
         $ docker run -p 3001:8080 registry.heroku.com/guarded-scrubland-78590/web
     - run grid (ports 4444 and 5555 as per docker-compose.yml)
         $ app/features/docker-compose up -d
-    - Run app pointing to localAPI
+    - Run app pointing to localAPI -> USE IP from ifconfig or ipconfig (but you must be on a LAN or internet) - look a creating a dev env 
         $ APP_ENV=local npm start
-    -    
+    or
+    - Build docker image for the web app and link to API    

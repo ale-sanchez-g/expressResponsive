@@ -4,7 +4,7 @@ var apiUrl;
 
 switch (app_env) {
     case "local":
-        apiUrl = "http://localhost:3001/";
+        apiUrl = "http://10.90.113.3:3001/";
         console.log("locahost:3001 config");
         break;
     default:
