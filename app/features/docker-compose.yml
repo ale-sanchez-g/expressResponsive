@@ -1,0 +1,20 @@
+api:
+  image: registry.heroku.com/guarded-scrubland-78590/web
+  ports:
+    - "3001:8080"
+web:
+  image: registry.heroku.com/mysterious-forest-66057/web
+  environment:
+    - APP_ENV="production"
+  ports:
+    - "3000:8080"
+hub:
+  image: selenium/hub
+  ports:
+    - "4444:4444"
+chrome:
+  image: selenium/node-chrome
+  links:
+    - hub
+  expose:
+    - "5555"

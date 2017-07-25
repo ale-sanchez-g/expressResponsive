@@ -7,13 +7,13 @@ div
             .slideshow-container
                 .mySlides
                     .numbertext 1 / 3
-                    iframe(src='https://guarded-scrubland-78590.herokuapp.com/giphy/' + tag)
+                    iframe(src=api + 'giphy/' + tag)
                 .mySlides
                     .numbertext 2 / 3
-                    iframe(src='https://guarded-scrubland-78590.herokuapp.com/giphy/' + tag)
+                    iframe(src=api + 'giphy/' + tag)
                 .mySlides
                     .numbertext 3 / 3
-                    iframe(src='https://guarded-scrubland-78590.herokuapp.com/giphy/' + tag)
+                    iframe(src=api + 'giphy/' + tag)
                 a.prev(onclick="plusSlides(-1)") &#10094;
                 a.next(onclick="plusSlides(1)") &#10095;
             p(align='center')

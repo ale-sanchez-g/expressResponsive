@@ -10,32 +10,32 @@ div
     .panel.panel-default
         .panel-heading
             h4  Trump Giphy
-            a(href="https://guarded-scrubland-78590.herokuapp.com/giphy/trump" target="_blank") Trump giphy example
+            a(href=api + "giphy/trump" target="_blank") Trump giphy example
         .panel-body
-            | https://guarded-scrubland-78590.herokuapp.com/giphy/trump
+            | #{api}giphy/trump
 .col-lg-4
     .panel.panel-default
         .panel-heading
             h4 Passwords in English API
-            a(href="https://guarded-scrubland-78590.herokuapp.com/password" target="_blank") English
+            a(id="english_password" href=api + "password" target="_blank") English
         .panel-body
-            | https://guarded-scrubland-78590.herokuapp.com/password
+            | #{api}password
     .panel.panel-default
         .panel-heading
             h4 Passwords in Spanish API
-            a(href="https://guarded-scrubland-78590.herokuapp.com/palabras" target="_blank") Spanish
+            a(id="spanish_password" href=api + "palabras" target="_blank") Spanish
         .panel-body
-            | https://guarded-scrubland-78590.herokuapp.com/palabras
+            | #{api}palabras
     .panel.panel-default
         .panel-heading
             h4 Passwords in German API
-            a(href="https://guarded-scrubland-78590.herokuapp.com/worts" target="_blank") German
+            a(id="german_password" href=api + "worts" target="_blank") German
         .panel-body
-            | https://guarded-scrubland-78590.herokuapp.com/worts
+            | #{api}worts
 .col-lg-4
     .panel.panel-default
         .panel-heading
             h4 Passwords with special character
-            a(href="https://guarded-scrubland-78590.herokuapp.com/api/password?number=5&language=palabras&special=true" target="_blank") Flexyble API
+            a(href=api + "api/password?number=5&language=palabras&special=true" target="_blank") Flexyble API
         .panel-body
-            | https://guarded-scrubland-78590.herokuapp.com/api/password?number=5&language=palabras&special=true
+            | #{api}api/password?number=5&language=palabras&special=true
