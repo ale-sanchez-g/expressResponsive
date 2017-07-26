@@ -1,3 +1,5 @@
+var dictionary = require("../support/dictionary");
+
 module.exports = function() {
 
     this.Given(/^I visit "([^"]*)"$/, function (uri) {
@@ -10,9 +12,10 @@ module.exports = function() {
 
     this.Then(/^I will see a password with (\d+) words in "([^"]*)"$/, function (wordCount, lang) {
         browser.waitForVisible("#password", 5000);
-        var password = browser.getText("#password");
+        var password = browser.getText("#password").split('-');
         console.log(password);
         expect(password.length).toEqual(parseInt(wordCount) + 2);
+        dictionary.searchMyWords(password[2], lang);
     });
 
     this.When(/^I select a password in "([^"]*)" through homepage$/, function (lang) {
