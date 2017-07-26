@@ -4,8 +4,8 @@ var apiUrl;
 
 switch (app_env) {
     case "local":
-        apiUrl = "http://10.90.113.3:3001/";
-        console.log("locahost:3001 config");
+        apiUrl = "http://alejandro:3001/";
+        console.log("alejandro:3001 config");
         break;
     default:
         apiUrl = "https://guarded-scrubland-78590.herokuapp.com/";

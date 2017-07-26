@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
+    "local": "APP_ENV=local npm start",
     "test": "node ./node_modules/chimp/bin/chimp.js chimp.js"
   },
   "dependencies": {
@@ -16,7 +17,7 @@
     "static-favicon": "~1.0.0"
   },
   "engines": {
-    "node": "6.1.0"
+    "node": "6.11.1"
   },
   "devDependencies": {
     "chimp": "^0.49.1"

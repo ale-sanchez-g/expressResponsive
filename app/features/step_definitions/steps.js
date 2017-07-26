@@ -9,9 +9,10 @@ module.exports = function() {
     });
 
     this.Then(/^I will see a password with (\d+) words in "([^"]*)"$/, function (wordCount, lang) {
-        var password = browser.getText("div.panel-body").split("-");
-        expect(password.length).toEqual(parseInt(wordCount) + 2);
+        browser.waitForVisible("#password", 5000);
+        var password = browser.getText("#password");
         console.log(password);
+        expect(password.length).toEqual(parseInt(wordCount) + 2);
     });
 
     this.When(/^I select a password in "([^"]*)" through homepage$/, function (lang) {

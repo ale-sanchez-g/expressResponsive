@@ -34,4 +34,5 @@
     - Run app pointing to localAPI -> USE IP from ifconfig or ipconfig (but you must be on a LAN or internet) - look a creating a dev env 
         $ APP_ENV=local npm start
     or
-    - Build docker image for the web app and link to API    
+    - Build docker image for the web app and link to API
+    - abstract your local IP to use something like <alejandro> so that your code and test can use this    
