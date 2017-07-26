@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node app.js",
-    "local": "APP_ENV=local npm start",
+    "local": "API_URL='//alejandro:3001/' APP_ENV=local npm start",
     "test": "node ./node_modules/chimp/bin/chimp.js chimp.js"
   },
   "dependencies": {
