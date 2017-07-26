@@ -35,4 +35,6 @@
         $ APP_ENV=local npm start
     or
     - Build docker image for the web app and link to API
-    - abstract your local IP to use something like <alejandro> so that your code and test can use this    
+    - abstract your local IP to use something like <alejandro> so that your code and test can use this
+        * created updatehost.sh to update the osx hosts file
+        *  run with `sudo sh updatehost.sh` 
