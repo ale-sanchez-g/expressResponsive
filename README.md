@@ -42,10 +42,26 @@
         $ APP_ENV=local npm start
     or
     - Build docker image for the web app and link to API
- 
- ## Help commands
+    
+## Help commands
     
     - abstract your local IP to use something like <alejandro> so that your code and test can use this
         * created updatehost.sh to update the osx hosts file
         *  run with `sudo sh updatehost.sh` 
 
+## Running Local as a test environment
+
+    - spin up selenium grid and API using docker compose 
+        `$ cd app/features/
+       
+       # below shell script only updates in linux/osx, also if you change network connection
+         your IP will change so clean up you hosts file manually
+         
+         $ sudo sh support/updatehost.sh
+         $ docker-compose up -d
+         $ cd ..
+         $ npm run local
+    - after running your environment locally then you can run the cucumber test (use node 6.11.1)
+        $ cd app
+        $ npm run test
+    
