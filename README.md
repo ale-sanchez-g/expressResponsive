@@ -1,4 +1,4 @@
-## Heroku load
+## Heroku Create App
     
     - heroku login
     - heroku container:login || docker login --username=_ --password=$(heroku auth:token) registry.heroku.com
@@ -11,21 +11,28 @@
     or
     - docker tag <image> registry.heroku.com/<app>/<process-type>
     - docker push registry.heroku.com/<app>/<process-type>
-    
-    add locally
-    
+
+## Push any changes to your App
+
+     - make local code changes to your app then run the below   
+     - heroku login
+     - heroku container:login || docker login --username=_ --password=$(heroku auth:token) registry.heroku.com
+     - docker build -t registry.heroku.com/mysterious-forest-66057/web:latest .
+
+## If you lost connection to your app just run the below command    
+        
     - heroku open -a mysterious-forest-66057
     
-# Running automation in a full docker env
+# Docker commands
     
-  Pull images
+##  Pull images
     
     - docker pull alejandroAPI
     - docekr pull registry.heroku.com/mysterious-forest-66057/web
     - docker pull selenium/hub
     - docker pull selenium/node-chrome
     
-  Run container (with suggested ports)
+##  Run container (with suggested ports)
     
     - run api on port 3001
         $ docker run -p 3001:8080 registry.heroku.com/guarded-scrubland-78590/web
@@ -35,7 +42,26 @@
         $ APP_ENV=local npm start
     or
     - Build docker image for the web app and link to API
+    
+## Help commands
+    
     - abstract your local IP to use something like <alejandro> so that your code and test can use this
         * created updatehost.sh to update the osx hosts file
         *  run with `sudo sh updatehost.sh` 
 
+## Running Local as a test environment
+
+    - spin up selenium grid and API using docker compose 
+        `$ cd app/features/
+       
+       # below shell script only updates in linux/osx, also if you change network connection
+         your IP will change so clean up you hosts file manually
+         
+         $ sudo sh support/updatehost.sh
+         $ docker-compose up -d
+         $ cd ..
+         $ npm run local
+    - after running your environment locally then you can run the cucumber test (use node 6.11.1)
+        $ cd app
+        $ npm run test
+    
