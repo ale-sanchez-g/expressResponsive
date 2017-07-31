@@ -14,7 +14,7 @@ module.exports = function() {
         browser.waitForVisible("#password", 5000);
         var password = browser.getText("#password").split('-');
         console.log(password);
-        expect(password.length).toEqual(parseInt(wordCount) + 2);
+        expect(password.length).toEqual(parseInt(wordCount) + 1);
         dictionary.searchMyWords(password[2], lang);
     });
 
@@ -33,17 +33,18 @@ module.exports = function() {
 
 
     this.When(/^I submit a password request for$/, function (table) {
-        browser.setValue("#num_of_word", 5);
-        browser.selectByVisibleText("#language", "german");
-        browser.selectByVisibleText("#special_char", "true");
+        var data = table.hashes();
+        browser.setValue("#num_of_word", data[0]['number of words']);
+        browser.selectByVisibleText("#language", data[0]['language']);
+        browser.selectByVisibleText("#special_char", data[0]['special characters']);
         browser.click("#submit");
     });
 
 
-    this.Then(/^with special characters$/, function () {
+    this.Then(/^I can validate the password has special characters$/, function () {
         browser.waitForVisible("#password", 5000);
         var password = browser.getText("#password");
-        dictionary.containSpecialChar(password);
+        expect(dictionary.containSpecialChar(password)).toBe(true);
     });
 
 };

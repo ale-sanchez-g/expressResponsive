@@ -16,7 +16,7 @@ switch (app_env) {
 exports.password = function(req, res){
     var leng = req.params.leng;
     var language = req.query.language;
-    var number = req.query.number || 4;
+    var number = req.query.number || 3;
     var special = req.query.special || false;
 
     console.log(language);

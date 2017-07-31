@@ -7,14 +7,14 @@ var german = require('./languages/worts.json');
 function searchMyWords (word, languageDictionary) {
   var jsonList;
 
-    switch (languageDictionary) {
-        case 'English':
+    switch (languageDictionary.toLowerCase()) {
+        case 'english':
             jsonList = JSON.stringify(english);
             break;
-        case "Spanish":
+        case "spanish":
             jsonList = JSON.stringify(spanish);
             break;
-        case "German":
+        case "german":
             jsonList = JSON.stringify(german);
             break;
     }
@@ -23,9 +23,10 @@ function searchMyWords (word, languageDictionary) {
 }
 
 function containSpecialChar (string) {
-    expect(string).toContain("")
+    return /[~`!#$%\^&*+=[\]\\';,/{}|\\":<>\?]/g.test(string);
 }
 
 module.exports = {
-    searchMyWords: searchMyWords
+    searchMyWords: searchMyWords,
+    containSpecialChar: containSpecialChar
 };
