@@ -25,12 +25,19 @@ Feature: Users are able to get passwords suggested
       | spanish  |
       | german   |
 
-
+  @custom
   Scenario: User is able to request a customize password
     Given I visit "http://alejandro:8080/password/any"
     When I submit a password request for
       | number of words | language | special characters |
+      | 5               | german   | false              |
+    Then I will see a password with 5 words in "german"
+
+
+  @custom
+  Scenario: User is able to request a password with special characters
+    Given I visit "http://alejandro:8080/password/any"
+    When I submit a password request for
+      | number of words | language | special characters |
       | 5               | german   | true               |
-    Then I am redirected to my API with a password in german
-    And with 5 number of words
-    And with special characters
+    Then I can validate the password has special characters
