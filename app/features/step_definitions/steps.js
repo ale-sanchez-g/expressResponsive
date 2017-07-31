@@ -33,24 +33,17 @@ module.exports = function() {
 
 
     this.When(/^I submit a password request for$/, function (table) {
-        // Write code here that turns the phrase above into concrete actions
-        return 'pending';
+        browser.setValue("#num_of_word", 5);
+        browser.selectByVisibleText("#language", "german");
+        browser.selectByVisibleText("#special_char", "true");
+        browser.click("#submit");
     });
 
-
-    this.Then(/^with (\d+) number of words$/, function (arg1) {
-        // Write code here that turns the phrase above into concrete actions
-        return 'pending';
-    });
 
     this.Then(/^with special characters$/, function () {
-        // Write code here that turns the phrase above into concrete actions
-        return 'pending';
-    });
-
-    this.Then(/^I am redirected to my API with a password in german$/, function () {
-        // Write code here that turns the phrase above into concrete actions
-        return 'pending';
+        browser.waitForVisible("#password", 5000);
+        var password = browser.getText("#password");
+        dictionary.containSpecialChar(password);
     });
 
 };

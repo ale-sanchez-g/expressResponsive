@@ -22,6 +22,10 @@ function searchMyWords (word, languageDictionary) {
     expect(jsonList.toLowerCase()).toContain(word.toLowerCase());
 }
 
+function containSpecialChar (string) {
+    expect(string).toContain("")
+}
+
 module.exports = {
     searchMyWords: searchMyWords
 };

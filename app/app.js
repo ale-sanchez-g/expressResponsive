@@ -25,6 +25,7 @@ app.get('/', home.home);
 app.get('/gallery', gallery.gallery);
 app.get('/home', home.home);
 app.get('/password/:leng', password.password);
+app.get('/password', password.password);
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
