@@ -2,12 +2,17 @@ doctype html
 html
     head
         title Password App - My first Nodejs express App Experiment
+        meta(name='description', content='A simple NODEjs express app that provides you with a password API')
         meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        meta(name='robots', content="INDEX,FOLLOW")
+        meta(name='keywords', content="passoword")
         //
            Bootstrap CSS
         link(href='/stylesheets/bootstrap.css', rel='stylesheet', media='screen')
         script(type='text/javascript', src='/javascripts/jquery.js')
         script(type='text/javascript', src='/javascripts/bootstrap.min.js')
+        script(type="application/ld+json")
+            |{"@context": "http://schema.org","@type": "WebSite","name": "Password App" }
     body
         //
            Navigation Bar
