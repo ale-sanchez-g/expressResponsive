@@ -1,40 +1,25 @@
-doctype html
-html
-    head
-        title Password App - My first Nodejs express App Experiment
-        meta(name='description', content='A simple NODEjs express app that provides you with a password API')
-        meta(name='viewport', content='width=device-width, initial-scale=1.0')
-        meta(name='robots', content="INDEX,FOLLOW")
-        meta(name='keywords', content="passoword")
-        //
-           Bootstrap CSS
-        link(href='/stylesheets/bootstrap.css', rel='stylesheet', media='screen')
-        script(type='text/javascript', src='/javascripts/jquery.js')
-        script(type='text/javascript', src='/javascripts/bootstrap.min.js')
-        script(type="application/ld+json")
-            |{"@context": "http://schema.org","@type": "WebSite","name": "Password App" }
-    body
-        //
-           Navigation Bar
-        .bodykinda
-            .navbar.navbar-default
-                .navbar-header
-                    button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
-                        span.icon-bar
-                        span.icon-bar
-                        span.icon-bar
-                    a.navbar-brand(href='/')
-                        | Experiment
-                .navbar-collapse.collapse.navbar-responsive-collapse
-                    ul.nav.navbar-nav.navbar-right
-                        li
-                            a(href='/') Home
-                        li
-                            a(href='/gallery?tag=trump') Giphy gallery
-                        li
-                            a(href='/password/english') English Password
-                        li
-                            a(href='/password/spanish') Spanish Password
-                        li
-                            a(href='/password/german') German Password
-        br
+body
+    //
+       Navigation Bar
+    .bodykinda
+        .navbar.navbar-default
+            .navbar-header
+                button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-responsive-collapse')
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                a.navbar-brand(href='/')
+                    | Experiment
+            .navbar-collapse.collapse.navbar-responsive-collapse
+                ul.nav.navbar-nav.navbar-right
+                    li
+                        a(href='/') Home
+                    li
+                        a(href='/gallery?tag=trump') Giphy gallery
+                    li
+                        a(href='/password/english') English Password
+                    li
+                        a(href='/password/spanish') Spanish Password
+                    li
+                        a(href='/password/german') German Password
+    br
