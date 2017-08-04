@@ -17,7 +17,7 @@
      - make local code changes to your app then run the below   
      - heroku login
      - heroku container:login || docker login --username=_ --password=$(heroku auth:token) registry.heroku.com
-     - docker build -t registry.heroku.com/mysterious-forest-66057/web:latest .
+     - heroku container:push web --app mysterious-forest-66057
 
 ## If you lost connection to your app just run the below command    
         

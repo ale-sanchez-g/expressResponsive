@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node app.js",
     "local": "APP_ENV=local npm start",
-    "test": "node ./node_modules/chimp/bin/chimp.js chimp.js",
+    "test": "node ./node_modules/chimp/bin/chimp.js chimp.js --tags=~@smoke",
+    "smoke:test": "node ./node_modules/chimp/bin/chimp.js chimp.js --tags=@smoke",
     "watch": "node ./node_modules/chimp/bin/chimp.js --watch"
   },
   "dependencies": {
